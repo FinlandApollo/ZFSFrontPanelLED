@@ -20,7 +20,7 @@ ZFSPool                          24.7T  4.29T    260     81  17.2M  2.17M
     pci-0000:00:1f.2-ata-4           -      -     35     10  2.15M   277K
 -------------------------------  -----  -----  -----  -----  -----  -----
 
-
+ 
 # this removes all the excess data, columns and names
 zpool iostat -v 0.5 | awk -F' ' '/-ata-/{ print "Z",$1,$4,$5}'
 
